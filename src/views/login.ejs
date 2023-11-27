@@ -1,0 +1,59 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3"></div>
+      <h1 class="text-center">Login</h1>
+      <p class="text-center lead">Faça login ou crie sua conta.</p>
+      
+      <%- include('includes/messages'); %>
+
+      <div class="row">
+        <div class="col-lg">
+          <h4 class="text-center my-3">Criar Conta ou Entrar</h4>
+          <p>Se você ainda não tem uma conta, preencha o formulário abaixo:</p>
+          <form class="form-cadastro" action="/login/register" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Criar usuário</button>
+          </form>
+        </div>
+        <div class="col-lg">
+          <h4 class="text-center my-3">Entre com seu login</h4>
+          <p>Se você já possui uma conta, faça login abaixo:</p>
+          <form class="form-login" action="/login/login" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+            <div class="mb-3">
+              <label for="exampleInputEmail2" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword2" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" id="exampleInputPassword2">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck2">
+              <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </form>
+        </div>
+      </div>
+
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>
