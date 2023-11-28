@@ -37,14 +37,14 @@ exports.login = async function(req, res) {
     if(login.errors.length > 0) {
       req.flash('errors', login.errors);
       req.session.save(function() {
-        return res.redirect('/login/index');
+        return res.redirect('/agenda/login/index');
       });
       return;
     }
     req.flash('success', 'Você entrou no sistema.');
     req.session.user = login.user;
     req.session.save(function() {
-      return res.redirect('/login/index');
+      return res.redirect('/agenda/login/index');
     });
   } catch(e) {
     console.log(e);

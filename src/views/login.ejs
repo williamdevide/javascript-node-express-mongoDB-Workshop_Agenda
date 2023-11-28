@@ -15,7 +15,7 @@
         <div class="col-lg">
           <h4 class="text-center my-3">Criar Conta ou Entrar</h4>
           <p>Se você ainda não tem uma conta, preencha o formulário abaixo:</p>
-          <form class="form-cadastro" action="/login/register" method="POST">
+          <form class="form-cadastro" action="/agenda/login/register" method="POST">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -32,7 +32,7 @@
         <div class="col-lg">
           <h4 class="text-center my-3">Entre com seu login</h4>
           <p>Se você já possui uma conta, faça login abaixo:</p>
-          <form class="form-login" action="/login/login" method="POST">
+          <form class="form-login" action="/agenda/login/login" method="POST">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="mb-3">
               <label for="exampleInputEmail2" class="form-label">Email</label>
