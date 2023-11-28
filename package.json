@@ -1,6 +1,6 @@
 {
   "name": "workshop-agenda",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Agenda utilizando Javascript / Node.JS / Express / MongoDB",
   "main": "server.js",
   "scripts": {
